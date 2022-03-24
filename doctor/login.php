@@ -48,7 +48,7 @@
                     //$password = mysqli_real_escape_string($conn, $raw_password);
 
                     //2. SQL to check whether the user with username and password exists or not
-                    $sql = "SELECT * FROM doctorpanel WHERE email_name='$email_name' AND password='$password'";
+                    $sql = "SELECT * FROM doctors WHERE email_name='$email_name' AND password='$password'";
 
                     //3. Execute the Query
                     $res = mysqli_query($con, $sql);

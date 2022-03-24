@@ -176,8 +176,8 @@ $db_select = mysqli_select_db($con, 'doctor-appointment') or die(mysqli_error())
               //$doctor_name=$_POST['doctor_name'];
               //$catagory_name=$_POST['catagory_name'];
               
-              $sql6="INSERT INTO `patient_appointment`( `patient_name`, `patient_address`, `phone_no`, `gender`, `symptom`,`doctor_name`, `depart_name`, `date`)
-               VALUES ('$full_name','$address','$phone_no','$gender','$symptoms','$doctor_name','$catagory_name','$date' )";
+              $sql6="INSERT INTO `patient_appointment`( `patient_name`, `patient_address`, `phone_no`, `gender`, `symptom`,`doctor_id`,`doctor_name`, `depart_name`, `date`)
+               VALUES ('$full_name','$address','$phone_no','$gender','$symptoms','$id','$doctor_name','$catagory_name','$date' )";
 
               $res6 = mysqli_query($con, $sql6);
 

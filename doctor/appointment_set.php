@@ -7,11 +7,26 @@
         
         <form action="" method="POST">
             <table class="tbl-30">
+            <?php
+                if(isset($_SESSION['email_name']))
+                {
+                    $email_name=$_SESSION['email_name'];
+                    $get_pro="select * from doctors where email_name='$email_name'";
+                    $res = mysqli_query($con,$get_pro);
+                    $count= mysqli_num_rows($res);
+                    if($count>0){
+                        while($row=mysqli_fetch_assoc($res)){
+                            $doctor_id=$row['doctor_id'];
+                            $doctor_name=$row['doctor_name'];
+                        }
+                    }
+                }
+            ?>
 
                 <tr>
                     <td>Doctor Name</td>
                     <td>
-                        <input type="text" name="doctor_name" placeholder="">
+                        <input type="text" name="doctor_name" value="<?php echo $doctor_name; ?>" placeholder="">
                     </td>
                 </tr>
                 <tr>
@@ -66,7 +81,8 @@
 
                     //Create a SQL Query to Save or Add food
                     // For Numerical we do not need to pass value inside quotes '' But for string value it is compulsory to add quotes ''
-                    $sql2 = "INSERT INTO appointment_store SET 
+                    $sql2 = "INSERT INTO appointment_store SET
+                        doctor_id = '$doctor_id',
                         doctor_name = '$doctor_name',
                         patient_name = '$patient_name',
                         symptom = '$symptom',

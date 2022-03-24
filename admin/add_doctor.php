@@ -24,6 +24,18 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>Email Name: </td>
+                    <td>
+                        <input type="text" name="email_name" placeholder="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password: </td>
+                    <td>
+                        <input type="text" name="password" placeholder="">
+                    </td>
+                </tr>
+                <tr>
                     <td>Doctor Image: </td>
                     <td>
                         <input type="file" name="image">
@@ -137,6 +149,8 @@
                 
                 //1. Get the DAta from Form
                 $doctor_name = $_POST['doctor_name'];
+                $email_name = $_POST['email_name'];
+                $password = $_POST['password'];
 
                 if(isset($_FILES['image']['name']))
                 {
@@ -197,6 +211,8 @@
                 // For Numerical we do not need to pass value inside quotes '' But for string value it is compulsory to add quotes ''
                 $sql2 = "INSERT INTO doctors SET 
                     doctor_name = '$doctor_name',
+                    email_name = '$email_name',
+                    password = '$password',
                     image_name = '$image_name',
                     catagory_id = '$category',
                     degree = '$degree',

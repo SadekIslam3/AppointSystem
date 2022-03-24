@@ -28,9 +28,8 @@
          <div class="wrapper">
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="patient.php">View Appointment</a></li>
-                <li><a href="appointment.php">Appointment Store</a></li>
-                <li><a href="doctor_register.php">Register</a></li>               
+                <li><a href="patient_search.php">View Appointment</a></li>
+                <li><a href="appointment.php">Appointment Store</a></li>              
                 <li><a href="logout.php">Log Out</a></li>
                     
             </ul>
