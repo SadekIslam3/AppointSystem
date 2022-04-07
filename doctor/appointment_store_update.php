@@ -42,7 +42,7 @@
 
             <form action="" method="POST">
 
-                <table class="table-30">
+                <table class="tbl-30">
                     <tr>
                         <td>Medicine Name: </td>
                         <td>

@@ -1,4 +1,4 @@
-<?php include('includes/header.php'); ?>
+<?php include('includes/header.php'); ?>3
 
 <div class="manage">
     <div class = "wrapper">
@@ -22,6 +22,7 @@
         <a href="add_doctor.php" class="btn-add">Add Doctor</a>
         <br>
         <br>
+        <br>
         <table class="tbl-full">
             <tr>
                 <th>ID</th>
@@ -35,7 +36,8 @@
                 <th>Time Schedule</th>
                 <th>Floor No</th>
                 <th>Room No</th>
-                <th>Update/delete</th>
+                <th>Update</th>
+                <th>Delete</th>
         
             </tr>
             <?php 
@@ -95,19 +97,24 @@
                                         ?>
 
                                 </td>
-                                <td style="width: 120px; text-align: center;"><?php echo $catagory_id; ?></td>
+                                <td style="width: 160px; text-align: center;"><?php echo $catagory_id; ?></td>
                                 <td style="width: 180px; text-align: center;"><?php echo $degree; ?></td>
                                 <td style="width: 80px; text-align: center;"><?php echo $chamder_name; ?></td>
                                 <td style="width: 120px; text-align: center;"><?php echo $designation; ?></td>
                                 <td style="width: 120px; text-align: center;"><?php echo $day; ?></td>
                                 <td style="width: 240px; text-align: center;"><?php echo $time_schedule; ?></td>
-                                <td style="width: 120px; text-align: center;"><?php echo $floor_no; ?></td>
-                                <td style="width: 120px; text-align: center;"><?php echo $room_no; ?></td>
+                                <td style="width: 140px; text-align: center;"><?php echo $floor_no; ?></td>
+                                <td style="width: 150px; text-align: center;"><?php echo $room_no; ?></td>
 
-                                <td style="width: 80px; padding-left: 40px;">
-                                    <a href="<?php echo SITEURL; ?>admin/doctor_update.php?doctor_id=<?php echo $doctor_id; ?>" class="btn-update">Update</a>
-                                    <a href="<?php echo SITEURL; ?>admin/doctor_delete.php?doctor_id=<?php echo $doctor_id; ?>&image_name=<?php echo $image_name; ?>" class="btn-delete">Delete</a>
+                                <td style="width: 160px; padding-left: 40px;">
+                                    <a  href="<?php echo SITEURL; ?>admin/doctor_update.php?doctor_id=<?php echo $doctor_id; ?>" class="btn-update">Update</a>
+                                    <!-- <a style="margin-top:90px;" href="<?php echo SITEURL; ?>admin/doctor_delete.php?doctor_id=<?php echo $doctor_id; ?>&image_name=<?php echo $image_name; ?>" class="btn-delete">Delete</a> -->
                                 </td>
+                                <td style="width: 160px; padding-left: 40px;">
+                                    <!-- <a style="margin-bottom:300px;" href="<?php echo SITEURL; ?>admin/doctor_update.php?doctor_id=<?php echo $doctor_id; ?>" class="btn-update">Update</a> -->
+                                    <a style="margin-top:90px;" href="<?php echo SITEURL; ?>admin/doctor_delete.php?doctor_id=<?php echo $doctor_id; ?>&image_name=<?php echo $image_name; ?>" class="btn-delete">Delete</a>
+                                </td>
+                                
                             </tr>
 
                             <?php

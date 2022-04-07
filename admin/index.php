@@ -27,7 +27,7 @@
 
                     <h1><?php echo $count; ?></h1>
                     <br />
-                    Categories
+                    <h2>Total Categories</h2>
                 </div>
 
                 <div class="colo-4 text-center">
@@ -43,7 +43,7 @@
 
                     <h1><?php echo $count2; ?></h1>
                     <br />
-                    Doctors 
+                    <h2>Total Doctors </h2>
                 </div>
 
                 <div class="colo-4 text-center">
@@ -59,7 +59,7 @@
 
                     <h1><?php echo $count3; ?></h1>
                     <br />
-                    Users  
+                    <h2>Register Users</h2>  
                 </div>
 
                 <div class="colo-4 text-center">
@@ -75,7 +75,7 @@
 
                     <h1><?php echo $count4; ?></h1>
                     <br />
-                    Appointments 
+                    <h2>All Appointments </h2>
                 </div>
 
                 <div class="clearfix"></div>

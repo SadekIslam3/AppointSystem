@@ -124,7 +124,7 @@
         else
         {
             //redirect to manage category with session message
-            $_SESSION['no-category-found'] = "<div class='error'>Doctor not Found.</div>";
+            $_SESSION['no-category-found'] = "<div class='error'>Patient not Found.</div>";
             header('location:'.SITEURL.'patient_view.php');
         }
 
@@ -219,12 +219,13 @@
             {
                 //Category Updated
                 $_SESSION['update'] = "<div class='success'>Patient Updated Successfully.</div>";
-                header('location:'.SITEURL.'patient_search.php');
+                //header('location:'.SITEURL.'patient_view.php');
+                echo "<script>window.location.href='patient_view.php';</script>";
             }
             else
             {
                 //failed to update category
-                $_SESSION['update'] = "<div class='error'>Failed to Update Doctor.</div>";
+                $_SESSION['update'] = "<div class='error'>Failed to Update .</div>";
                 header('location:'.SITEURL.'patient_update.php');
             }
 

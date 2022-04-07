@@ -30,6 +30,8 @@
                 //Get all the data
                 $row = mysqli_fetch_assoc($res);
                 $doctor_name = $row['doctor_name'];
+                $email_name = $row['email_name'];
+                $password = $row['password'];
                 $current_image = $row['image_name'];
                 $degree = $row['degree'];
                 $chamber_name = $row['chamber_name'];
@@ -62,6 +64,18 @@
                 <td>Doctor Name: </td>
                 <td>
                     <input type="text" name="doctor_name" value="<?php echo $doctor_name; ?>">
+                </td>
+            </tr>
+            <tr>
+                <td>Email Name: </td>
+                <td>
+                    <input type="text" name="email_name" value="<?php echo $email_name; ?>">
+                </td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td>
+                    <input type="text" name="password" value="<?php echo $password; ?>">
                 </td>
             </tr>
 
@@ -155,6 +169,8 @@
             //1. Get all the values from our form
             $doctor_id = $_POST['doctor_id'];
             $doctor_name = $_POST['doctor_name'];
+            $email_name = $_POST['email_name'];
+            $password = $_POST['password'];
             $current_image = $_POST['current_image'];
 
             //2. Updating New Image if selected
@@ -238,6 +254,8 @@
             //3. Update the Database
             $sql2 = "UPDATE doctors SET 
                 doctor_name = '$doctor_name',
+                email_name = '$email_name',
+                password = '$password',
                 image_name = '$image_name',
                 degree = '$degree',
                 chamber_name = '$chamber_name',

@@ -232,7 +232,7 @@
                 if($res2==true)
                 {
                     //Data inserted Successfullly
-                    $_SESSION['add'] = "<div class='success'> Added Successfully.</div>";
+                    $_SESSION['add'] = "<div class='success'></div>";
     ?>
                     <!--header('location:'.SITEURL.'admin/doctor.php');-->
                     <script>window.location.href='http://localhost/Doctor-appointment/admin/doctor.php';</script>

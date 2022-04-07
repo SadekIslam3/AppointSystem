@@ -206,7 +206,7 @@
 				      <button type = "submit" name="submit" class="btn">Register</button>
 			      </div>
             <div class="btn-box" style="margin-left: 10px;">
-               <button type="submit" name="submit" class="btn "><a style="padding-left: 5px; padding-top: 10px; text-decoration: none; color: white;" href="patient_search.php">Update</a></button>
+               <button type="submit" name="submit" class="btn "><a style="padding-left: 5px; padding-top: 10px; text-decoration: none; color: white;" href="patient_view.php">View</a></button>
 				    </div>
           </div>
       </form>

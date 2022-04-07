@@ -1,20 +1,3 @@
-<style>
-    .container{
-    background: linear-gradient(rgba(138, 100, 209, 0.644),rgba(8, 139, 47, 0.705));
-    text-align: left;
-    color: #fff;
-    height: auto;
-    width: 600px;
-    padding-top: 20px;
-    position: relative;
-    left: 50px;
-    margin-top: 50px;
-    margin-right: 20px;
-    float: left;
-    border-radius: 15px;
-}
-</style>
-
 <?php include('data_con/database.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,7 +53,7 @@
 
                     ?>
     <div class= "container">
-        <div style="width: 150px; margin-left: 400px;">
+        <div style="width: 150px; margin-left: 500px;">
         <?php
                         //check image
                         if($image_name==""){

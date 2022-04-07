@@ -119,7 +119,7 @@
                 if($res==true)
                 {
                     //Query Executed and Category Added
-                    $_SESSION['add'] = "<div class='success'>Added Successfully.</div>";
+                    $_SESSION['add'] = "<div class='success'></div>";
                     //Redirect to Manage Category Page
                     header('location:'.SITEURL.'admin/catagory.php');
                 }

@@ -43,48 +43,60 @@
                     <!--<th style="text-align: center;">Update</th>-->
             
                 </tr>
-        <?php
-            $search = $_POST['search'];
-            $sql="SELECT * FROM user WHERE email_name LIKE '%$search%'";
-            $res = mysqli_query($con,$sql);
-            $count= mysqli_num_rows($res);
-            if($count>0){
-                while($row=mysqli_fetch_assoc($res)){
-                    $user_id=$row['user_id'];
-                    $full_name=$row['full_name'];
-                    $address=$row['address'];
-                    $phone_no=$row['phone_no'];
-                    $email_name=$row['email_name'];
-                    $password=$row['password'];
-                    $age=$row['age'];
-                    $gender=$row['gender'];
-                    ?>
+                <?php
+                        if(isset($_SESSION['email_name']))
+                        {
+                            $email_name=$_SESSION['email_name'];
+                            $get_pro="select * from user where email_name='$email_name'";
+                            $res = mysqli_query($con,$get_pro);
+                            $count= mysqli_num_rows($res);
+                            if($count>0){
+                                while($row=mysqli_fetch_assoc($res)){
+                                    $user_id=$row['user_id'];
+                                
+                                
+                                $get_pro1="select * from user where user_id='$user_id'";
+                                $res1 = mysqli_query($con,$get_pro1);
+                                
+                                while($row1=mysqli_fetch_array($res1)){
+                                        $user_id=$row1['user_id'];
+                                        $full_name=$row1['full_name'];
+                                        $address=$row1['address'];
+                                        $phone_no=$row1['phone_no'];
+                                        $email_name=$row1['email_name'];
+                                        $password=$row1['password'];
+                                        $age=$row1['age'];
+                                        $gender=$row1['gender'];
+                                    }
+                                }
+                            }
 
-                            <tr>
-                                <td style="width: 80px;text-align: center;"><?php echo  $user_id; ?>. </td>
-                                <td style="width: 120px;text-align: center;"><?php echo $full_name; ?></td>
-                                <td style="width: 130px;text-align: center;"><?php echo $address; ?></td>
-                                <td style="width: 90px;text-align: center;"><?php echo $phone_no; ?></td>
-                                <td style="width: 110px;text-align: center;"><?php echo $email_name; ?></td>
-                                <td style="width: 90px;text-align: center;"><?php echo $password; ?></td>
-                                <td style="width: 60px;text-align: center;"><?php echo $age; ?></td>
-                                <td style="width: 70px;text-align: center;"><?php echo $gender; ?></td>
+                ?>
+                <tr>
+                    <td style="width: 80px;text-align: center;"><?php echo  $user_id; ?>. </td>
+                    <td style="width: 120px;text-align: center;"><?php echo $full_name; ?></td>
+                    <td style="width: 130px;text-align: center;"><?php echo $address; ?></td>
+                    <td style="width: 90px;text-align: center;"><?php echo $phone_no; ?></td>
+                    <td style="width: 110px;text-align: center;"><?php echo $email_name; ?></td>
+                    <td style="width: 90px;text-align: center;"><?php echo $password; ?></td>
+                    <td style="width: 60px;text-align: center;"><?php echo $age; ?></td>
+                    <td style="width: 70px;text-align: center;"><?php echo $gender; ?></td>
 
-                                <td style="width: 40px; padding-left: 80px; padding-top: 40px;">
-                                    <a href="<?php echo SITEURL; ?>patient_update.php?user_id=<?php echo $user_id; ?>" class="btn-update">Update</a>
-                                <br>
-                                <br>
-                                <br>
-                                </td>
-                            </tr>
+                    <td style="width: 40px; padding-left: 80px; padding-top: 40px;">
+                            <a href="<?php echo SITEURL; ?>patient_update.php?user_id=<?php echo $user_id; ?>" class="btn-update">Update</a>
+                            <br>
+                            <br>
+                            <br>
+                    </td>
+                </tr>
 
-                    <?php
-                }
-            }
-            else{
-                echo "No patient";
-            }
-        ?>
+                <?php
+                
+               }
+                else{
+                        echo "No patient";
+                    }
+                ?>
         
         
             

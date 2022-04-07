@@ -141,7 +141,7 @@ $db_select = mysqli_select_db($con, 'doctor-appointment') or die(mysqli_error())
 				  </div>
           <div class="form-group col-lg-4">
 					<label for="inputSymptoms">Choose Date</label>
-					<input type="text" name="date" class="form-control" id="inputDate" placeholder="">
+					<input type="date" name="date" class="form-control" id="inputDate" placeholder="">
 				  </div>
 				  <!--<div class="form-group col-lg-4">
 					<label for="inputDate">Choose Date </label>
